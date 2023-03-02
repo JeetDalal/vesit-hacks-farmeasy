@@ -1,16 +1,7 @@
 # farmeasy
 
 A new Flutter project.
+Screens
 
-## Getting Started
+![Screenshot_1677779570](https://user-images.githubusercontent.com/93593029/222512063-9144fc99-4dd1-4724-af68-6029c4907bf2.png)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
