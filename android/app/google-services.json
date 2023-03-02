@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "94825369955",
+    "project_id": "farm-easy-hackathon",
+    "storage_bucket": "farm-easy-hackathon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94825369955:android:e8ed5b2249db13ca2f8356",
+        "android_client_info": {
+          "package_name": "com.example.farmeasy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94825369955-i6noa9hb1c2euqqgiklqqj7ou8ju8o6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5Km7e9AE3eY9CTaHOiC5VXORbseZtneU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94825369955-i6noa9hb1c2euqqgiklqqj7ou8ju8o6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
