@@ -1,5 +1,6 @@
 import 'package:farmeasy/methods/product_provider.dart';
 import 'package:farmeasy/screens/Farmer%20Screens/main_farmer_screen.dart';
+import 'package:farmeasy/screens/customer%20Screens/customer_main_screen.dart';
 import 'package:farmeasy/screens/login_screen.dart';
 import 'package:farmeasy/screens/register_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -66,10 +67,12 @@ class _MyAppState extends State<MyApp> {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: loginSatus ? const MainFarmerScreen() : const MainLoginScreen(),
+          home:
+              loginSatus ? const CustomerMainScreen() : const MainLoginScreen(),
           routes: {
             'register-screen': (context) => const RegisterScreen(),
             '/farmer-screen': (context) => const MainFarmerScreen(),
+            '/customer-screen': (context) => const CustomerMainScreen(),
           }),
     );
   }
