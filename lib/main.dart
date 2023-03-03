@@ -1,8 +1,10 @@
+import 'package:farmeasy/methods/product_provider.dart';
 import 'package:farmeasy/screens/Farmer%20Screens/main_farmer_screen.dart';
 import 'package:farmeasy/screens/login_screen.dart';
 import 'package:farmeasy/screens/register_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'firebase_options.dart';
 import 'methods/helper.dart';
@@ -52,16 +54,23 @@ class _MyAppState extends State<MyApp> {
   }
 
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => ProductProvider(),
         ),
-        home: loginSatus ? const MainFarmerScreen() : const MainLoginScreen(),
-        routes: {
-          'register-screen': (context) => const RegisterScreen(),
-          '/farmer-screen': (context) => const MainFarmerScreen(),
-        });
+      ],
+      child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          home: loginSatus ? const MainFarmerScreen() : const MainLoginScreen(),
+          routes: {
+            'register-screen': (context) => const RegisterScreen(),
+            '/farmer-screen': (context) => const MainFarmerScreen(),
+          }),
+    );
   }
 }

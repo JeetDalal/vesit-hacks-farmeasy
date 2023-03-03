@@ -6,6 +6,8 @@ class DbServices {
   CollectionReference ref = FirebaseFirestore.instance.collection('farmers');
   CollectionReference availableTrucks =
       FirebaseFirestore.instance.collection('Trucks');
+  CollectionReference products =
+      FirebaseFirestore.instance.collection('products');
 
   //Save UserData
   saveUerData(String userName, String email) async {

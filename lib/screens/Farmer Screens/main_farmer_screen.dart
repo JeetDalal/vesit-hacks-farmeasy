@@ -1,8 +1,10 @@
+import 'package:farmeasy/methods/product_provider.dart';
 import 'package:farmeasy/screens/Farmer%20Screens/farmer_home_screen.dart';
 import 'package:farmeasy/screens/Farmer%20Screens/stats_screen.dart';
 import 'package:farmeasy/screens/Farmer%20Screens/truck_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class MainFarmerScreen extends StatefulWidget {
   const MainFarmerScreen({Key? key}) : super(key: key);
@@ -16,6 +18,7 @@ class _MainFarmerScreenState extends State<MainFarmerScreen> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
+    final productList = Provider.of<ProductProvider>(context).productList;
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black,
@@ -30,7 +33,7 @@ class _MainFarmerScreenState extends State<MainFarmerScreen> {
             currentIndex = value;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
